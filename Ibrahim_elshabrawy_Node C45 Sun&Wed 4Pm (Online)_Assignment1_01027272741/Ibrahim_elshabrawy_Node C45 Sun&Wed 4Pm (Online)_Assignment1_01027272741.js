@@ -160,6 +160,3 @@
 // };
 // splitSentence(sentence);
 
-let arr = [1, 2, 3];
-console.log(...arr);
-// Output: 1 2 3
