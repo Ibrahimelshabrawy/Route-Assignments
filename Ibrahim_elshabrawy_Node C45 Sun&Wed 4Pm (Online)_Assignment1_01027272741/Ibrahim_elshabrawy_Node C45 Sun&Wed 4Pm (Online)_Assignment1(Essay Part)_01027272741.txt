@@ -1,0 +1,119 @@
+1. What is the difference between forEach and for...of? When would you use each?
+
+for..of => Control Flow (Loop) , Looping and in each iteration it will return (value) Not index , Waiting to do any line of code and don't skip any line even if this line take time ( Synchronous )
+
+forEach =>Consider as Array Method, Looping and in each iteration it passes value and optionally index , Skip any line takes time ( Asynchronous )
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. What is hoisting and what is the Temporal Dead Zone (TDZ)? Explain with examples.
+
+1/ Hoisting :
+JavaScript take any variable and any function and declare it at the top of the code ( Just declare it not assign any value to it ) , Hoisting can be applies to ( Var - Let - Const - Function )
+
+Var => Declare it at the top of the code and give it default value equal ( Undefined )
+
+Let , Const => Declare it at the top of the code but not given it any default value 
+
+Function =>     1- Declaration Function : Declare it at the top of the code 
+		2- Anonymous Function : Declare it at the top of the code		
+
+
+2/Temporal Dead Zone :
+It means Where you can use the variable or function !!
+Just take an example => If you have Variable called ( name ) , Function called Sum
+When you use :
+
+Var => you can use (name) before assign it 
+Console.log(name) // Output => undefined
+var name = "Ibrahim" 
+
+Let/const => You can not use (name) before assign it 
+Console.log(name) // Output => Can not access to variable name
+let/const name = "Ibrahim" 
+
+Declaration Function => 
+Sum(5)
+function Sum(num1){
+Console.log(num1)  // Output => 5
+}
+
+Anonymous Function => 
+Sum(5) // Output => Can not access to function Sum before initialization
+let Sum = function(num1){
+Console.log(num1)  // Output => 5
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. What are the main differences between == and ===?
+
+== : It checks at value only and don't care about type
+=== : It checks at value and type
+
+Example: 
+5 == "5"      Output => True
+5 === "5"     Output => False
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Explain how try-catch works and why it is important in async operations. ( Don't take it yet , but i will explain from my last experience (Maybe it will be false🤨))
+
+try : it will execute the code if everything go in it's right way and there is no errors 
+
+catch : will execute if there is an errors , so (try) will not execute and the compiler will go directly to the handler of async operations that is called ( catch ) 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. What’s the difference between type conversion and coercion? Provide examples of each.
+
+We can summarize it in two words only :
+
+type conversion => Manual
+type coercion => Automatic
+
+
+okay let's explain it :
+type conversion => means that you will convert the type by yourself ( Explicit ) , So How we can do that ?? let's take an example 
+
+Example:
+let x = "123"   
+console.log(typeOf x)  		// Output => string
+let y = Number(x)		// Explicit Conversion
+console.log(typeOf y)   	// Output => Number
+
+type coercion => Javascript tells you (متوجعش دماغك انت خالص بالحوارات دي انا هتصرف )
+it means it will convert the variable (Implicit) , So How we can do that ?? let's take an example 
+
+Example:
+let x = "5" + 3     // Output => 8
+
+(تعبت من الانجليزي يا باشمهندس ف هكتب دي بالعربي بقى وخلاص 🥱)
+جافاسكريبت هنا شافت انك قاعد بتعك وبتجمع رقم على نص ف قالتلك ايه العبط ده بدال النص ده جواه رقم يبقى ينفع يتحول ف هتحوله تلقائي من نفسها ل رقم وتجمعه ع الرقم اللي جنبه وشكرا وكل ده بيحصل بدون تدخل منك 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+										     The End (الفرحة)
+										       Best wishes 🥳🥳
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
