@@ -120,7 +120,26 @@
 // sum(1, 2, 3, 4, 5);
 
 // ================================= Question 12 ======================================
+let flag = true
+function success(){
 
+    return new Promise( (r,j)=>{
+       if(flag){
+        setTimeout(()=>{
+
+            r()
+        },3000)
+       }else{
+        j()
+       }
+})
+}
+
+success().then(()=>{
+    console.log("Success");
+}).catch(()=>{
+    console.log("Error");
+})
 // ================================= Question 13 ======================================
 // let arrayOfNumbers = [1, 3, 7, 2, 4];
 
@@ -159,4 +178,5 @@
 //   console.log(sentence.split(" "));
 // };
 // splitSentence(sentence);
+
 
